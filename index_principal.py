@@ -50,6 +50,7 @@ def hola():
         print ("frecuencia dominante: "+ str(frecuenciaDominante) + "Hz", end='\r')
         freqActual.set(frecuencia)
         
+        
         tolerancia=13
         toleranciaAfinacion = 1.3
 
@@ -127,9 +128,11 @@ def hola():
         
         for i in range(0, int(FRECUENCIA_MUESTREO * SEGUNDOS_GRABACION / CHUNK)):
             analizar(stream)
+            #etiqueta1.after(1000,hola)
+            
 
 
-        
+        #etiqueta1.after(1000,hola)
         stream.stop_stream()
         stream.close()
         p.terminate()
